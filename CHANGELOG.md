@@ -1,6 +1,9 @@
 Change log
 -----------
 
+# v2.7.4+rev1
+## 2017-10-18
+
 * Include cdc_amc and cdc_wdm module for the skx2 [Theodor]
 * Various bug fixes [Theodor]
 

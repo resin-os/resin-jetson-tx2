@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Update meta-rust to pyro [Andrei]
+
 # v2.8.1+rev1
 ## 2017-12-01
 

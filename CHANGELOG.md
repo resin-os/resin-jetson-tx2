@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Change display name Nvidia Jetson TX2 SK -> SKX2 [Theodor]
 * Update meta-rust to pyro [Andrei]
 
 # v2.8.1+rev1

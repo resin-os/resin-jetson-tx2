@@ -18,7 +18,7 @@ DOCKER_STORAGE = "overlay2"
 #RESINHUP ?= "yes"
 
 # Set this to change the supervisor tag used
-#TARGET_TAG ?= "master"
+#SUPERVISOR_TAG ?= "master"
 
 # Compress final raw image
 #RESIN_RAW_IMG_COMPRESSION ?= "xz"
@@ -60,3 +60,5 @@ BB_DISKMON_DIRS = "\
     ABORT,${SSTATE_DIR},100M,1K"
 
 CONF_VERSION = "1"
+
+HOSTTOOLS += "docker iptables"

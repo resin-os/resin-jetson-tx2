@@ -51,6 +51,17 @@ do_compile() {
     ${tegrahost} --chip 0x18 --partitionlayout flash.bin --list images_list.xml zerosbk
     ${tegrasign} --key None --list images_list.xml --pubkeyhash pub_key.key
     ${tegrahost} --chip 0x18 --partitionlayout flash.bin --updatesig images_list_signed.xml
+
+    # Append validation bytes to our files
+    cat ${B}/tos_sigheader.img.hash >> eks_sigheader.img.encrypt
+    cat ${B}/eks_sigheader.img.hash >> bpmp_sigheader.img.encrypt
+    cat ${B}/eks_sigheader.img.hash >> tegra186-a02-bpmp-quill-p3310-1000-c01-00-te770d-ucm2_sigheader.dtb.encrypt
+    cat ${B}/eks_sigheader.img.hash >> camera-rtcpu-sce_sigheader.bin.encrypt
+    # Warmboot magic
+    dd if=/dev/zero bs=1 count=8 >> warmboot_wbheader.bin.encrypt
+    cat ${B}/camera-rtcpu-sce_sigheader.bin.hash >> warmboot_wbheader.bin.encrypt
+    dd if=/dev/zero bs=1 count=360 >> warmboot_wbheader.bin.encrypt
+    dd if=${B}/camera-rtcpu-sce_sigheader.bin.encrypt bs=1 skip=384 count=48 >> warmboot_wbheader.bin.encrypt
 }
 
 do_deploy() {

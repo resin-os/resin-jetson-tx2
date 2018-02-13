@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.9.7+rev3
+## 2018-02-13
+
+* Fix binary magic [Theodor]
+
 # v2.9.7+rev2
 ## 2018-01-29
 

@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.9.7+rev4
+## 2018-02-14
+
+* Reserve the last 1.2G of the internal disk for the Nvidia bootloaders [Theodor]
+
 # v2.9.7+rev3
 ## 2018-02-13
 

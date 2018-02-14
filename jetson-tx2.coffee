@@ -27,6 +27,14 @@ module.exports =
 		BOARD_POWERON
 	].concat(postProvisioningInstructions)
 
+	imageDownloadAlerts: [{
+		type: "warning",
+		message: "ResinOS is tested along side L4T 28.1.0. Other versions of L4T might not be able to boot ResinOS."
+	},{
+		type: "warning",
+		message: "Please note that the last 1.2G of the internal disk are reserved by the Nvidia bootloader. Writing to this part of the disk might result in an unbootable device."
+	}]
+
 	gettingStartedLink:
 		windows: 'https://docs.resin.io/jetson-tx2/nodejs/getting-started/#adding-your-first-device'
 		osx: 'https://docs.resin.io/jetson-tx2/nodejs/getting-started/#adding-your-first-device'

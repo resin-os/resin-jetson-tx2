@@ -20,7 +20,7 @@ RESIN_CONFIGS[wdm] = "CONFIG_USB_WDM=m"
 TEGRA_INITRAMFS_INITRD = "0"
 
 KERNEL_ROOTSPEC = "\${resin_kernel_root} ro rootwait" 
-KERNEL_ROOTSPEC_FLASHER = "root=/dev/mmcblk1p13 ro rootwait" 
+KERNEL_ROOTSPEC_FLASHER = "root=/dev/mmcblk1p11 ro rootwait" 
 
 generate_extlinux_conf() {
     install -d ${D}/${KERNEL_IMAGEDEST}/extlinux

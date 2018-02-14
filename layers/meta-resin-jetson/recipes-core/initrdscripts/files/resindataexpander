@@ -23,7 +23,7 @@ resindataexpander_enabled() {
 
 resindataexpander_run() {
     info "resindataexpander: Expand data partition... "
-    parted -s /dev/$datadev -- resizepart 16 100%
+    parted -s /dev/$datadev -- resizepart 14 58724352s
     info "resindataexpander: Finished expanding data partition."
 
     partprobe

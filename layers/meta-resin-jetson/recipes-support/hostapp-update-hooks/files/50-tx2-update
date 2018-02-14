@@ -2,13 +2,23 @@
 
 set -o errexit
 
+path="/opt/tegra-binaries-signed"
+
+mtsbootpack="mce_mts_d15_prod_cr_sigheader.bin.encrypt"                                                                                                                           
+sc7="warmboot_wbheader.bin.encrypt"                                                                                                                                               
+
 flash() {
     for line in $(cat $1); do
         part_name=$(echo $line | cut -d ':' -f 1) 
         file_name=$(echo $line | cut -d ':' -f 2)
         
-        dd oflag=dsync if="/opt/tegra-binaries-signed/$update_dir/$file_name" of="/dev/disk/by-partlabel/$part_name"
+        dd oflag=dsync if="$path/$file_name" of="/dev/disk/by-partlabel/$part_name"
     done
 }
 
 flash "/opt/tegra-binaries-signed/partition_specification.txt"
+
+# Flash first-stage bootloader to reserved memory                                                                                                                                 
+dd oflag=dsync if="$path/$mtsbootpack" of=/dev/mmcblk0 bs=512 seek=58724353 count=8191                                                                                                                
+# Flash warmboot code to reserved memory                                                                                                                                          
+dd oflag=dsync if="$path/$sc7" of=/dev/mmcblk0 bs=512 seek=58746533 count=12287     

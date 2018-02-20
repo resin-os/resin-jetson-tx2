@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.9.7+rev4
+## 2018-02-20
+
+* Reserve end of disk for Nvidia bootloader [Theodor]
+
 # v2.9.7+rev3
 ## 2018-02-13
 

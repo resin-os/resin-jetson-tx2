@@ -13,12 +13,7 @@ resindataexpander_enabled() {
 
     parted /dev/$datadev print fix 2>&1 > /dev/null
 
-    for freespace in $(parted -m /dev/$datadev unit MiB print free | grep free | cut -d: -f4 | sed 's/MiB//g'); do
-        if [ $(echo $freespace \> $FREESPACE_LIMIT | bc -l) == "1" ]; then
-            return 0
-        fi
-    done
-    return 1
+    return 0
 }
 
 resindataexpander_run() {

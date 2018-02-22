@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Patch kernel to support Intel RealSense cameras [Theodor]
+
 # v2.9.7+rev4
 ## 2018-02-21
 

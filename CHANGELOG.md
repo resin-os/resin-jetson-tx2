@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Remove obsolete submodule oe-meta-go [Florin]
 * Update the resin-yocto-scripts submodule to dc9dfe466e48d934e55fb20a05156886873b1ab1 (on master branch) [Florin]
 * Patch kernel to support Intel RealSense cameras [Theodor]
 

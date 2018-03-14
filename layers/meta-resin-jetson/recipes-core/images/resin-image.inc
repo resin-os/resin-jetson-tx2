@@ -13,7 +13,7 @@ RESIN_BOOT_SIZE = "80960"
 PARTITION_TABLE_TYPE = "gpt"
 DEVICE_SPECIFIC_SPACE = "49152"
 
-IMAGE_DEPENDS_resinos-img_append = " tegra-binaries-prepare:do_deploy" 
+do_image_resinos-img[depends] += " tegra-binaries-prepare:do_deploy" 
 
 device_specific_configuration() {
     partitions=$(cat ${DEPLOY_DIR_IMAGE}/tegra-binaries/partition_specification.txt)

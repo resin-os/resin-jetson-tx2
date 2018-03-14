@@ -38,7 +38,7 @@ module.exports =
 		machine: 'skx2'
 		image: 'resin-image-flasher'
 		fstype: 'resinos-img'
-		version: 'yocto-pyro'
+		version: 'yocto-rocko'
 		deployArtifact: 'resin-image-flasher-skx2.resinos-img'
 		compressed: true
 

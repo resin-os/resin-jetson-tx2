@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Move to rocko [Theodor]
+
 # v2.12.1+rev1
 ## (2018-03-12)
 

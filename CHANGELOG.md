@@ -1,6 +1,10 @@
 Change log
 -----------
 
+# v2.12.3+rev1
+## (2018-03-15)
+
+* Update the meta-resin submodule to version v2.12.3 [Florin]
 * Move to rocko [Theodor]
 
 # v2.12.1+rev1

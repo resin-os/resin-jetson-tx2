@@ -17,6 +17,7 @@ S = "${WORKDIR}"
 
 DTB_jetson-tx2 = "${SHARED}/kernel/dtb/tegra186-quill-p3310-1000-c03-00-base.dtb"
 DTB_skx2 = "${DEPLOY_DIR_IMAGE}/tegra186-tx2-cti-ASG916.dtb"
+DTB_cti-orbitty-tx2 = "${DEPLOY_DIR_IMAGE}/tegra186-tx2-cti-ASG001-USB3.dtb"
 
 BOOT0 = "boot0.img"
 BINARY_INSTALL_PATH = "/opt/tegra-binaries"
@@ -31,7 +32,7 @@ do_compile() {
     tegraflash="${SHARED}/bootloader/tegraflash.py"
 
     files=" \
-        ${SHARED}/bootloader/mce_mts_d15_prod_cr.bin \ 
+        ${SHARED}/bootloader/mce_mts_d15_prod_cr.bin \
         ${SHARED}/bootloader/cboot.bin \
         ${SHARED}/bootloader/tos.img \
         ${SHARED}/bootloader/eks.img \

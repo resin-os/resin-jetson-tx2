@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Enable SPIdev support [Theodor]
+
 # v2.12.3+rev1
 ## (2018-03-15)
 

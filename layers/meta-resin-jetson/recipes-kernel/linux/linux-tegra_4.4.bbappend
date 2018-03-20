@@ -9,9 +9,8 @@ SRC_URI_append = " \
   file://realsense_camera_formats_linux-yocto_4.4.patch \
   "
 
-RESIN_CONFIGS_append = " uvc"                                                                                                                                                  
-                                                                                                                                                                                  
-RESIN_CONFIGS[uvc] = " \                                                                                                                                                       
+RESIN_CONFIGS_append = " uvc"
+RESIN_CONFIGS[uvc] = " \
 		CONFIG_USB_VIDEO_CLASS=m \
 		CONFIG_USB_VIDEO_CLASS_INPUT_EDEV=y \
 		" 
@@ -28,3 +27,15 @@ RESIN_CONFIGS_DEPS[uvc] = " \
 		CONFIG_SND_USB=y \
 		CONFIG_SND_USB_AUDIO=m \
     "
+
+RESIN_CONFIGS_append = " spi"
+RESIN_CONFIGS[spi] = " \
+		CONFIG_SPI=y \
+		CONFIG_SPI_MASTER=y \
+		CONFIG_SPI_SPIDEV=m \
+		"
+
+RESIN_CONFIGS_DEPS[spi] = " \
+		CONFIG_QSPI_TEGRA186=y \
+		CONFIG_SPI_TEGRA144=y \
+		"

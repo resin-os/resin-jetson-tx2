@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Default root partition to the 12 [Theodor]
 * Default enable of spi dev in userspace [Theodor]
 * Upgrade to l4t 28.2.0 [Theodor]
 

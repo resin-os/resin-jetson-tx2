@@ -1,0 +1,27 @@
+From be30b91200d782e7504eba8517dceef2de6ee657 Mon Sep 17 00:00:00 2001
+From: Theodor Gherzan <theodor@resin.io>
+Date: Thu, 29 Mar 2018 14:34:50 +0200
+Subject: [PATCH] Change default root partition
+
+Upstream-Status: Inappropriate [configuration] 
+Signed-off-by: Theodor Gherzan <theodor@resin.io>
+---
+ include/config_distro_bootcmd.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/include/config_distro_bootcmd.h b/include/config_distro_bootcmd.h
+index d718224..d132be0 100644
+--- a/include/config_distro_bootcmd.h
++++ b/include/config_distro_bootcmd.h
+@@ -315,7 +315,7 @@
+ 	"boot_targets=" BOOT_TARGET_DEVICES(BOOTENV_DEV_NAME) "\0"
+ 
+ #ifndef BOOT_TARGET_DEFAULTDEVPLIST
+-#define BOOT_TARGET_DEFAULTDEVPLIST	"1"
++#define BOOT_TARGET_DEFAULTDEVPLIST	"C"
+ #endif
+ #define BOOTENV_SET_DEFAULTDEVPLIST \
+ 	"defaultdevplist=" BOOT_TARGET_DEFAULTDEVPLIST "\0"
+-- 
+2.7.4
+

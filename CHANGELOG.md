@@ -1,6 +1,9 @@
 Change log
 -----------
 
+# v2.12.5+rev3
+## (2018-03-30)
+
 * Default root partition to the 12 [Theodor]
 * Default enable of spi dev in userspace [Theodor]
 * Upgrade to l4t 28.2.0 [Theodor]

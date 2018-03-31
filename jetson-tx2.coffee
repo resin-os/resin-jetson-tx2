@@ -52,7 +52,7 @@ module.exports =
 	configuration:
 		config:
 			partition:
-				primary: 12
+				primary: 1
 			path: '/config.json'
 
 	initialization: commonImg.initialization

@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.12.5+rev4
+## (2018-03-31)
+
+* Fix boot partition number [Theodor]
+
 # v2.12.5+rev3
 ## (2018-03-30)
 

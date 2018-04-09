@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Update the resin-yocto-scripts submodule to 6d6f7b29348323569f47c8acbf5963ff64d17647 (on master branch) [Florin]
 * Fix boot partition number in the coffee file for skx2 [Florin]
 
 # v2.12.5+rev5

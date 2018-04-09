@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Fix boot partition number in the coffee file for skx2 [Florin]
+
 # v2.12.5+rev5
 ## (2018-03-31)
 

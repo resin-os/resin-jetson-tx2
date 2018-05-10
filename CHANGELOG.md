@@ -1,6 +1,8 @@
 Change log
 -----------
 
+* Update the meta-tegra submodule to rocko-l4t-r28.2 release [Theodor]
+* Update the resin-yocto-scripts submodule to f7718efbbf53369aaacb7eb54e707ee8a5d4fc4b (on master branch) [Theodor]
 * Include Xbox 360 gamepad driver kernel module [Laurence]
 
 # v2.12.5+rev6

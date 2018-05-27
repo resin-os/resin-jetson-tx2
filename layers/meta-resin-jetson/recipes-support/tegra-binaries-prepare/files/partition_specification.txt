@@ -4,8 +4,8 @@ bootloader-dtb:[DTB_NAME]_sigheader.dtb.encrypt
 secure-os:tos_sigheader.img.encrypt
 eks:eks_sigheader.img.encrypt
 bpmp-fw:bpmp_sigheader.bin.encrypt 
-bpmp-fw-dtb:tegra186-a02-bpmp-quill-p3310-1000-c04-00-te770d-ucm2_sigheader.dtb.encrypt
+bpmp-fw-dtb:tegra186-a02-bpmp-quill-p3310-1000-c01-00-te770d-ucm2_sigheader.dtb.encrypt
 sce-fw:camera-rtcpu-sce_sigheader.bin.encrypt
 sc7:warmboot_wbheader.bin.encrypt
-kernel:u-boot-dtb_sigheader.bin.encrypt
-kernel-dtb:[DTB_NAME]_sigheader.dtb.encrypt
+kernel:u-boot-dtb.bin
+kernel-dtb:[DTB_NAME].dtb

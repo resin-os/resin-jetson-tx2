@@ -6,7 +6,7 @@ RESIN_BOOT_PARTITION_FILES_append  = " extlinux.conf:/extlinux/extlinux.conf"
 
 DEVICE_SPECIFIC_SPACE = "49152"
 
-do_image_resinos-img[depends] += " tegra186-flash-dry:do_deploy" 
+do_image_resinos-img[depends] += " tegra-binaries-prepare:do_deploy"
 
 device_specific_configuration() {
     partitions=$(cat ${DEPLOY_DIR_IMAGE}/tegra-binaries/partition_specification.txt)

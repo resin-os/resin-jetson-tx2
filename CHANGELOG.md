@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v2.12.7+rev1
+## (2018-05-27)
+
+* Update the meta-resin submodule to version v2.12.7 [Florin]
+* Update the resin-yocto-scripts submodule to f7718efbbf53369aaacb7eb54e707ee8a5d4fc4b (on master branch) [Florin]
+* Revert to L4T 28.1 [Florin]
 * Include Xbox 360 gamepad driver kernel module [Laurence]
 
 # v2.12.5+rev6

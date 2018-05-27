@@ -1,6 +1,7 @@
 Change log
 -----------
 
+* Revert to L4T 28.1 [Florin]
 * Include Xbox 360 gamepad driver kernel module [Laurence]
 
 # v2.12.5+rev6

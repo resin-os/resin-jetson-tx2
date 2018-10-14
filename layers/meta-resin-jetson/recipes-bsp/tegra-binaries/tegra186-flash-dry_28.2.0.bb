@@ -190,6 +190,7 @@ INHIBIT_PACKAGE_DEBUG_SPLIT = "1"
 
 do_configure[depends] += "tegra-binaries:do_preconfigure"
 do_compile[depends] += "virtual/kernel:do_deploy"
+do_compile[depends] += "u-boot-tegra:do_deploy"
 do_install[depends] += "virtual/kernel:do_deploy"
 do_populate_lic[depends] += "tegra-binaries:do_unpack"
 

@@ -25,6 +25,7 @@ IMAGE_UBOOT ??= "u-boot-dtb"
 KERNEL_DEVICETREE_orbitty-tx2 = "${DEPLOY_DIR_IMAGE}/tegra186-tx2-cti-ASG001-USB3.dtb"
 KERNEL_DEVICETREE_skx2 = "${DEPLOY_DIR_IMAGE}/tegra186-tx2-cti-ASG916.dtb"
 KERNEL_DEVICETREE_spacely-tx2 = "${DEPLOY_DIR_IMAGE}/tegra186-tx2-cti-ASG006-IMX274-6CAM.dtb"
+KERNEL_DEVICETREE_astro-rev-g-tx2 = "${DEPLOY_DIR_IMAGE}/tegra186-tx2-cti-ASG001-revG+.dtb"
 
 DTBFILE ?= "${@os.path.basename(d.getVar('KERNEL_DEVICETREE', True).split()[0])}"
 

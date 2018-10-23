@@ -6,6 +6,7 @@ SRC_URI_append = " \
     file://tegra186-tx2-cti-ASG001-USB3.dtb \
     file://tegra186-tx2-cti-ASG006-IMX274-6CAM.dtb \
     file://tegra186-tx2-cti-ASG916.dtb \
+    file://tegra186-tx2-cti-ASG001-revG+.dtb \
     "
 
 RESIN_CONFIGS_append = " compat spi gamepad"
@@ -77,4 +78,5 @@ do_deploy_append() {
     cp ${WORKDIR}/tegra186-tx2-cti-ASG001-USB3.dtb "${DEPLOYDIR}"
     cp ${WORKDIR}/tegra186-tx2-cti-ASG006-IMX274-6CAM.dtb "${DEPLOYDIR}"
     cp ${WORKDIR}/tegra186-tx2-cti-ASG916.dtb "${DEPLOYDIR}"
+    cp ${WORKDIR}/tegra186-tx2-cti-ASG001-revG+.dtb "${DEPLOYDIR}"
 }

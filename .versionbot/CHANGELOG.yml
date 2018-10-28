@@ -1,4 +1,43 @@
 - commits:
+    - subject: Workaround for usb_modeswitch crash on 64 bits platforms
+      hash: 3149fad8073a7c340d730f82fd140c8ab12b8fc2
+      body: |
+        On 64 bits platforms (generic Intel x86-64, NVidia Jetson TX2),
+        the systemd usb-modeswitch service will core dump when starting.
+      footer:
+        Changelog-entry: Workaround for usb_modeswitch crash on 64 bits platforms
+        changelog-entry: Workaround for usb_modeswitch crash on 64 bits platforms
+        Signed-off-by: Florin Sarbu <florin@balena.io>
+        signed-off-by: Florin Sarbu <florin@balena.io>
+      author: Florin Sarbu
+  version: 2.24.0+rev2
+  date: 2018-10-25T13:18:05.825Z
+- commits:
+    - subject: Update the meta-resin submodule from v2.19.0 to v2.24.0
+      hash: 1f9532d1493ea3e9f9d3928e0e0c5d7052d02fd1
+      body: |
+        Update meta-resin from 2.19.0 to 2.24.0
+      footer:
+        Changelog-entry: Update the meta-resin submodule from v2.19.0 to v2.24.0
+        changelog-entry: Update the meta-resin submodule from v2.19.0 to v2.24.0
+        Signed-off-by: Florin Sarbu <florin@resin.io>
+        signed-off-by: Florin Sarbu <florin@resin.io>
+      author: Florin Sarbu
+    - subject: Pin skx2 to kernel version 4.4.38
+      hash: fe919168c9007088a8a443e7251d5e7fef97583b
+      body: |
+        We pin the skx2 to kernel version 4.4.38 (which is the version
+        from l4t 28.1) because later kernel versions introduced in l4t
+        28.2 produce EMI issues for this board.
+      footer:
+        Changelog-entry: Pin skx2 to kernel version 4.4.38
+        changelog-entry: Pin skx2 to kernel version 4.4.38
+        Signed-off-by: Florin Sarbu <florin@resin.io>
+        signed-off-by: Florin Sarbu <florin@resin.io>
+      author: Florin Sarbu
+  version: 2.24.0+rev1
+  date: 2018-10-24T08:17:36.863Z
+- commits:
     - subject: Update the meta-resin submodule to v2.19.0
       hash: b6789a5bb86df949ff27bc3f7bc43e371548a43e
       body: |

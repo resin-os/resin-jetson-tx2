@@ -1,6 +1,17 @@
 Change log
 -----------
 
+# v2.24.0+rev2
+## (2018-10-25)
+
+* Workaround for usb_modeswitch crash on 64 bits platforms [Florin Sarbu]
+
+# v2.24.0+rev1
+## (2018-10-24)
+
+* Update the meta-resin submodule from v2.19.0 to v2.24.0 [Florin Sarbu]
+* Pin skx2 to kernel version 4.4.38 [Florin Sarbu]
+
 # v2.19.0+rev1
 ## (2018-09-25)
 

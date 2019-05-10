@@ -9,6 +9,7 @@ SRC_URI_append = " \
 	file://realsense_camera_formats_linux-yocto_4.4.patch \
 	file://realsense_format_desc_4.4.patch \
 	file://0002-qmi_wwan-Update-from-4.14-kernel.patch \
+	file://0003-Added-the-IMX219-and-J20-drivers.patch \
 	"
 
 RESIN_CONFIGS_append = " uvc"
@@ -40,4 +41,10 @@ RESIN_CONFIGS[egalax] = " \
 RESIN_CONFIGS_append = " serial"
 RESIN_CONFIGS[serial] = " \
 		CONFIG_USB_SERIAL_GENERIC=y \
+		"
+
+RESIN_CONFIGS_append = " imx219"
+RESIN_CONFIGS[imx219] = " \
+		CONFIG_VIDEO_IMX219=y \
+		CONFIG_I2C_IOEXPANDER_J20=y \
 		"

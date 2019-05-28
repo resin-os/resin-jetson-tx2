@@ -1,0 +1,37 @@
+From 5e6501efa26bc19dad0b43e3a2b0daa81408a8ae Mon Sep 17 00:00:00 2001
+From: Fei Yang <fei.yang@intel.com>
+Date: Mon, 26 Aug 2013 11:21:48 -0700
+Subject: [PATCH] FIXDEP: error opening depfile
+ 
+Met a kernel build issue where fixdep fails to open a depfile,
+fixdep: error opening depfile: drivers/driver-name/.driver-code.o.d: No such file or directory
+make[4]: *** [drivers/driver-name/driver-code.o] Error 2
+make[3]: *** [drivers/driver-name] Error 2
+Don't know why the expected file was not created, but the assumption that
+the file had been created might not be true, so simply return for such failure.
+
+Change-Id: I299c01f2e3f6e1d04b19ced34ebeb964e16494e6
+Signed-off-by: Fei Yang <fei.yang@intel.com>
+
+Upstream-Status: Backport
+Signed-off-by: Vicentiu Galanopulo <vicentiu@balena.io>
+---
+ scripts/basic/fixdep.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/scripts/basic/fixdep.c b/scripts/basic/fixdep.c
+index c68fd61..e5bf47f 100644
+--- a/scripts/basic/fixdep.c
++++ b/scripts/basic/fixdep.c
+@@ -388,7 +388,7 @@ static void print_deps(void)
+ 	if (fd < 0) {
+ 		fprintf(stderr, "fixdep: error opening depfile: ");
+ 		perror(depfile);
+-		exit(2);
++		return;
+ 	}
+ 	if (fstat(fd, &st) < 0) {
+ 		fprintf(stderr, "fixdep: error fstat'ing depfile: ");
+-- 
+2.7.4
+

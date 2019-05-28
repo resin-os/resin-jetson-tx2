@@ -10,6 +10,7 @@ SRC_URI_append = " \
     file://tegra186-tx2-cti-ASG916.dtb \
     file://d3-rsp-fpdlink-ov10640-single-j2.dtb \
     file://tegra186-tx2-blackboard.dtb \
+    file://0003-error-opening-fixdep-file.patch \
     "
 
 RESIN_CONFIGS_append = " compat spi gamepad can tpg"

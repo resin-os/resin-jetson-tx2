@@ -10,6 +10,7 @@ SRC_URI_append = " \
     file://tegra186-tx2-cti-ASG916.dtb \
     file://d3-rsp-fpdlink-ov10640-single-j2.dtb \
     file://tegra186-tx2-blackboard.dtb \
+    file://tegra186-tx2-cti-ASG008-IMX185.dtb \
     file://0002-NFLX-2019-001-SACK-Panic.patch \
     file://0003-NFLX-2019-001-SACK-Panic-for-lteq-4.14.patch \
     file://0004-NFLX-2019-001-SACK-Slowness.patch \
@@ -111,6 +112,7 @@ do_deploy_append() {
     cp ${WORKDIR}/tegra186-tx2-cti-ASG001-USB3.dtb "${DEPLOYDIR}"
     cp ${WORKDIR}/tegra186-tx2-cti-ASG006-IMX274-6CAM.dtb "${DEPLOYDIR}"
     cp ${WORKDIR}/tegra186-tx2-cti-ASG916.dtb "${DEPLOYDIR}"
+    cp ${WORKDIR}/tegra186-tx2-cti-ASG008-IMX185.dtb "${DEPLOYDIR}"
 }
 
 do_deploy_append_n510-tx2() {

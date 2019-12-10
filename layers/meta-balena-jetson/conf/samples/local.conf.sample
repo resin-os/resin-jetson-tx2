@@ -1,5 +1,6 @@
 # Supported machines
 #MACHINE ?= "jetson-tx2"
+#MACHINE ?= "jetson-tx2-6"
 #MACHINE ?= "n510-tx2"
 #MACHINE ?= "orbitty-tx2"
 #MACHINE ?= "skx2"

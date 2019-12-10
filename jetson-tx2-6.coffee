@@ -12,9 +12,9 @@ postProvisioningInstructions = [
 
 module.exports =
 	version: 1
-	slug: 'chk5-tx2'
-	aliases: [ 'chk5-tx2' ]
-	name: 'Nvidia Jetson TX2 Chuck5'
+	slug: 'jetson-tx2-6'
+	aliases: [ 'jetson-tx2-6' ]
+	name: 'Nvidia Jetson TX2 Config 6'
 	arch: 'aarch64'
 	state: 'released'
 
@@ -37,11 +37,11 @@ module.exports =
 	supportsBlink: false
 
 	yocto:
-		machine: 'chk5-tx2'
+		machine: 'jetson-tx2-6'
 		image: 'resin-image-flasher'
 		fstype: 'resinos-img'
 		version: 'yocto-thud'
-		deployArtifact: 'resin-image-flasher-chk5-tx2.resinos-img'
+		deployArtifact: 'resin-image-flasher-jetson-tx2-6.resinos-img'
 		compressed: true
 
 	options: [ networkOptions.group ]

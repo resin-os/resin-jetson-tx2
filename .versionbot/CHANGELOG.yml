@@ -1,4 +1,25 @@
 - commits:
+    - subject: 'resin-image-initramfs: Install tegra-xusb firmware'
+      hash: 9935911a78a804bc9f1049bda1b8a5f62688f723
+      body: |
+        Issuing lsusb will trigger loading of the tegra
+        xusb firmware, and the first call will fail. This because
+        when the driver was loaded it failed to load it from the
+        initramfs as it wasn't present, and after a couple
+        retries the process was aborted.
+
+        Install firmware in initramfs so that it can
+        be loaded when the driver loads and avoid
+        usb related issues.
+      footer:
+        Changelog-entry: 'resin-image-initramfs: Install tegra-xusb firmware'
+        changelog-entry: 'resin-image-initramfs: Install tegra-xusb firmware'
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+  version: 2.45.1+rev3
+  date: 2019-12-09T14:27:37.892Z
+- commits:
     - subject: 'bt-scripts: Solve BT related issues'
       hash: 95aaa48f46b4a67c1d463b447c72d44d19f13b82
       body: |

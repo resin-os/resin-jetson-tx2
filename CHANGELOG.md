@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2.45.1+rev3
+## (2019-12-09)
+
+* resin-image-initramfs: Install tegra-xusb firmware [Alexandru Costache]
+
 # v2.45.1+rev2
 ## (2019-12-04)
 

@@ -28,6 +28,7 @@ KERNEL_DEVICETREE_skx2 = "${DEPLOY_DIR_IMAGE}/tegra186-tx2-cti-ASG916.dtb"
 KERNEL_DEVICETREE_spacely-tx2 = "${DEPLOY_DIR_IMAGE}/tegra186-tx2-cti-ASG006-IMX274-6CAM.dtb"
 KERNEL_DEVICETREE_srd3-tx2 = "${DEPLOY_DIR_IMAGE}/d3-rsp-fpdlink-ov10640-single-j2.dtb"
 KERNEL_DEVICETREE_blackboard-tx2 = "${DEPLOY_DIR_IMAGE}/tegra186-tx2-blackboard.dtb"
+KERNEL_DEVICETREE_jetson-tx2-6 = "${DEPLOY_DIR_IMAGE}/0x3090000.dtb"
 
 DTBFILE ?= "${@os.path.basename(d.getVar('KERNEL_DEVICETREE', True).split()[0])}"
 

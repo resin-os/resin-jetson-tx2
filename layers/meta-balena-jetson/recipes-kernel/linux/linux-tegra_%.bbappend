@@ -1,11 +1,14 @@
 inherit kernel-resin deploy
 
+KERNEL_MODULE_AUTOLOAD += " pci_tegra iwlwifi iwldvl iwldvm"
+
 FILESEXTRAPATHS_append := ":${THISDIR}/${PN}"
 SRC_URI_append = " \
     file://0001-Expose-spidev-to-the-userspace.patch \
     file://0002-mttcan-ivc-enable.patch \
     file://tegra186-tx2-cti-ASG001-USB3.dtb \
     file://tegra186-quill-p3310-1000-c03-00-base.dtb \
+    file://0x3090000.dtb \
     file://tegra186-tx2-cti-ASG006-IMX274-6CAM.dtb \
     file://tegra186-tx2-cti-ASG916.dtb \
     file://d3-rsp-fpdlink-ov10640-single-j2.dtb \
@@ -25,7 +28,7 @@ SRC_URI_remove_skx2 = "  \
     file://0001-bcmdhd-Fix-wifi-disconnect-problems.patch \
 "
 
-RESIN_CONFIGS_append = " compat spi gamepad can tpg"
+RESIN_CONFIGS_append = " compat spi gamepad can tpg iwlwifi"
 RESIN_CONFIGS_remove = "brcmfmac"
 
 RESIN_CONFIGS[compat] = " \
@@ -69,6 +72,15 @@ RESIN_CONFIGS_append_srd3-tx2 = " tpg"
 
 RESIN_CONFIGS[tpg] = " \
 		CONFIG_VIDEO_TEGRA_VI_TPG=m \
+"
+
+RESIN_CONFIGS_DEPS[iwlwifi] = " \
+		CONFIG_HAS_IOMEM=m \
+		CONFIG_IWLDVM=m \
+		CONFIG_IWLMVM=m \
+		CONFIG_IWLWIFI=m \
+		CONFIG_MAC80211=m \
+		CONFIG_PCI=m \
 "
 
 KERNEL_MODULE_AUTOLOAD_srd3-tx2 += "nvhost-vi-tpg"
@@ -121,6 +133,10 @@ do_deploy_append_n510-tx2() {
 
 do_deploy_append_srd3-tx2() {
     cp ${WORKDIR}/d3-rsp-fpdlink-ov10640-single-j2.dtb "${DEPLOYDIR}"
+}
+
+do_deploy_append_jetson-tx2-6() {
+    cp ${WORKDIR}/0x3090000.dtb "${DEPLOYDIR}"
 }
 
 do_deploy_append_blackboard-tx2() {

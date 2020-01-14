@@ -6,6 +6,7 @@
 #MACHINE ?= "spacely-tx2"
 #MACHINE ?= "srd3-tx2"
 #MACHINE ?= "blackboard-tx2"
+#MACHINE ?= "jetson-odmdata1-tx2"
 
 # We use the overlayfs docker storage driver on the Nvidia Jetson tx2
 BALENA_STORAGE = "overlay2"

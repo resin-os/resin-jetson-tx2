@@ -57,6 +57,13 @@ RESIN_CONFIGS[cdc_acm] = "CONFIG_USB_ACM=m"
 
 RESIN_CONFIGS[wdm] = "CONFIG_USB_WDM=m"
 
+RESIN_CONFIGS_append_jetson-odmdata1-tx2 = " gasket"
+
+RESIN_CONFIGS[gasket] = " \
+        CONFIG_STAGING_GASKET_FRAMEWORK=m \
+        CONFIG_STAGING_APEX_DRIVER=m \
+        "
+
 RESIN_CONFIGS[can] = " \
 		CONFIG_CAN=m \
 		CONFIG_CAN_RAW=m \
@@ -78,6 +85,8 @@ TEGRA_INITRAMFS_INITRD = "0"
 
 KERNEL_ROOTSPEC = "\${resin_kernel_root} ro rootwait"
 KERNEL_ROOTSPEC_FLASHER = "root=/dev/mmcblk1p2 ro rootwait"
+
+KERNEL_ARGS_jetson-odmdata1-tx2 += "gasket.dma_bit_mask=32"
 
 generate_extlinux_conf() {
     install -d ${D}/${KERNEL_IMAGEDEST}/extlinux

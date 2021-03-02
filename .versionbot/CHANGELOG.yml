@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update balena-yocto-scripts to v1.10.1
+      hash: da88c98fd58d2db3e19650664a541ecb08e11700
+      body: ''
+      footer:
+        Changelog-entry: Update balena-yocto-scripts to v1.10.1
+        changelog-entry: Update balena-yocto-scripts to v1.10.1
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+  version: 2021.01.2
+  date: 2021-03-02T13:12:11.302Z
+- commits:
     - subject: 'initrdscripts: Do not override dataexpander from meta-balena'
       hash: f5c94ca37532e5744148883c8012628256c46805
       body: |

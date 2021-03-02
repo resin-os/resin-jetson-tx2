@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2021.01.1
+## (2021-03-02)
+
+* initrdscripts: Do not override dataexpander from meta-balena [Alexandru Costache]
+
 # 2021.01.0
 ## (2021-02-11)
 

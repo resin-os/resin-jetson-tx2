@@ -1,4 +1,19 @@
 - commits:
+    - subject: 'initrdscripts: Do not override dataexpander from meta-balena'
+      hash: f5c94ca37532e5744148883c8012628256c46805
+      body: |
+        The device layer should use the resindataexpander script
+        from meta-balena.
+      footer:
+        Changelog-entry: 'initrdscripts: Do not override dataexpander from meta-balena'
+        changelog-entry: 'initrdscripts: Do not override dataexpander from meta-balena'
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+  version: 2021.01.1
+  date: 2021-03-02T10:10:12.166Z
+- commits:
     - subject: Update meta-balena from v2.53.11 to v2.68.1
       hash: a5b86951485a81621af66b55c7c7c90af4cdbb0f
       body: |

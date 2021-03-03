@@ -1,6 +1,12 @@
 Change log
 -----------
 
+# v2.71.3+rev2
+## (2021-03-03)
+
+* modemmanager: Don't include u-blox mode switch script for now [Alexandru Costache]
+* linux-tegra: Fix modules not loaded [Alexandru Costache]
+
 # v2.71.3+rev1
 ## (2021-03-02)
 

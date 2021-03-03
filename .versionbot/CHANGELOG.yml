@@ -1,4 +1,41 @@
 - commits:
+    - subject: 'modemmanager: Don''t include u-blox mode switch script for now'
+      hash: f571c9a8bb5a15f9ff2cbd878d9c8f7dc824d0ea
+      body: |
+        The u-blox mode switch fails frequently, and is
+        a known issue, addressed in meta-balena ticket 2039.
+        The script can also potentially trigger a reboot right
+        after the board boots in the new OS. Let's not include this
+        script until a proper fix is in place, because the SKX2
+        board uses this type of modem.
+      footer:
+        Changelog-entry: 'modemmanager: Don''t include u-blox mode switch script for now'
+        changelog-entry: 'modemmanager: Don''t include u-blox mode switch script for now'
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+    - subject: 'linux-tegra: Fix modules not loaded'
+      hash: 3451f504877814be09453c4d33de70affdf8c7a1
+      body: |
+        With scmversion enabled module loading
+        fails because the revision length doesn't
+        match between the kernel and modules dir.
+
+        We're not interested in having commit
+        SHAs in the kernel version anyway, so
+        let's disable this, like we do for the
+        rest of the jetson boards.
+      footer:
+        Changelog-entry: 'linux-tegra: Fix modules not loaded'
+        changelog-entry: 'linux-tegra: Fix modules not loaded'
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+  version: 2.71.3+rev2
+  date: 2021-03-03T14:18:47.425Z
+- commits:
     - subject: Update meta-balena from v2.68.1 to v2.71.3
       hash: 804869c15e11d5d325a192a47b2a3609728f0bbb
       body: |

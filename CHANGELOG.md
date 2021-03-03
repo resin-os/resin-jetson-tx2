@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2021.01.4
+## (2021-03-03)
+
+* modemmanager: Don't include u-blox mode switch script for now [Alexandru Costache]
+
 # v2021.01.3
 ## (2021-03-03)
 

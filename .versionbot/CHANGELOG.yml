@@ -1,4 +1,25 @@
 - commits:
+    - subject: 'linux-tegra: Fix modules not loaded'
+      hash: aae9ca19ab0539440a1e379864893b85ad508659
+      body: |
+        With scmversion enabled module loading
+        fails because the revision length doesn't
+        match between the kernel and modules dir.
+
+        We're not interested in having commit
+        SHAs in the kernel version anyway, so
+        let's disable this, like we do for the
+        rest of the jetson boards.
+      footer:
+        Changelog-entry: 'linux-tegra: Fix modules not loaded'
+        changelog-entry: 'linux-tegra: Fix modules not loaded'
+        Signed-off-by: Alexandru Costache <alexandru@balena.io>
+        signed-off-by: Alexandru Costache <alexandru@balena.io>
+      author: Alexandru Costache
+      nested: []
+  version: 2021.01.3
+  date: 2021-03-03T10:36:17.740Z
+- commits:
     - subject: Update balena-yocto-scripts to v1.10.1
       hash: da88c98fd58d2db3e19650664a541ecb08e11700
       body: ''

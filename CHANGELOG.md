@@ -1,6 +1,11 @@
 Change log
 -----------
 
+# v2021.01.3
+## (2021-03-03)
+
+* linux-tegra: Fix modules not loaded [Alexandru Costache]
+
 # v2021.01.2
 ## (2021-03-02)
 

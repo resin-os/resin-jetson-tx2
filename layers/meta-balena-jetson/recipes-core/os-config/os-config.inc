@@ -7,6 +7,7 @@ SRC_URI += " \
 	file://os-config.service \
 	file://os-config-devicekey.service \
 	file://0001-Adjust-CONFIG_JSON_FLASHER_PATH-based-on-OS-changes.patch \
+	file://0002-Rename-flasher-flag-path-to-balena-image-flasher.patch \
 	"
 
 SYSTEMD_SERVICE_${PN} = " \
